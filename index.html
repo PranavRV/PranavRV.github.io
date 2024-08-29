@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website-Pranav videkar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b8ec7aac9f.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
+    <script type="text/javascript">
+    (function() {
+        emailjs.init("service_n7jefwd"); // Replace with your EmailJS user ID
+    })();
+    </script>
+    
+    <script type="text/javascript">
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            emailjs.sendForm('service_n7jefwd', 'service_n7jefwd', this)
+                .then(function() {
+                    alert('Message sent successfully!');
+                }, function(error) {
+                    alert('Failed to send message: ' + JSON.stringify(error));
+                });
+        });
+    </script>
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services </a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <img src="images/PV2.jpg" class="logo">
+                <i class="fas fa-solid fa-bars" onclick="openmenu()" ></i>
+            </nav>
+            <div class="header-text">
+                <p>Front-end Developer</p>
+                <h1>Hi, I'm <span>Pranav Videkar</span><br> From India </h1>
+            </div>
+        </div>
+    </div>
+<!-----------------about-------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/passport_photo1.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Hello! I'm Pranav Videkar, a passionate software developer with a strong foundation in front-end development, 
+                        full-stack projects, and database management. With a Master's degree in Computer Applications from Pune University,
+                        I have honed my skills in crafting efficient, user-friendly web applications.
+                        <br>
+                        <br>
+                        My journey in the tech world has been marked by a commitment to continuous learning and innovation. I thrive in dynamic environments, 
+                        whether it's building responsive interfaces, optimizing back-end processes, or integrating cutting-edge technologies into scalable
+                        solutions My projects reflect my dedication to creating impactful digital experiences that blend functionality with aesthetics.
+                        <br>
+                        <br>
+                        When I’m not coding, you’ll often find me riding my bike, exploring new places, and connecting with nature through travel and trekking.
+                        I also enjoy sketching and singing, which provide a creative outlet and balance to my tech-driven life. 
+                        xThese hobbies keep me inspired and energized, helping me bring fresh perspectives to my work.  
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links " onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI//UX</span><br>Creating Intuitive Web & Mobile Interfaces</li>
+                            <li><span>Web Developement</span><br>Developing Responsive & Dynamic Web Applications</li>
+                            <li><span>Software Developement</span><br>Designing and Implementing Applications Across Platforms</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023</span><br>Industry internship At Corizo Edutech </li>
+                            <li><span>Web Developement</span><br>Website/WebApp  Development</li>
+                            <li><span>Software Developement </span><br>Building Software Platforms</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span>
+                                <br>Web Development Training At Corizo Edutech.</li>
+                            <li><span>2021-2023</span><br>Master's In Computer Applications [MCA]. <br><h5>Modern College Of Engineering ,Shivajinagar, Pune.</h5></li>
+                            <li><span>2018-2021</span> <br>Bachelor's In Comouter Applications [BCA]. <br><h5>Modern college of Arts, Science & Commerce, Pune.</h5></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- --------------services-------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p> I specialize in crafting visually engaging and user-centric websites tailored to your brand’s unique needs. 
+                    My web design process emphasizes creating responsive, mobile-friendly layouts that ensure a seamless user experience across all devices. 
+                    By focusing on both aesthetics and functionality, I aim to build websites that not only capture your brand's essence but also drive user engagement and conversions.
+                    Whether you need a fresh redesign or a new site from scratch, I deliver solutions that blend creativity with practicality.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Design</h2>
+                <p>My UI/UX design services are dedicated to creating intuitive and aesthetically pleasing user interfaces that enhance the overall user experience.
+                   I conduct thorough research to understand your target audience and design interfaces that are both functional and enjoyable to use. 
+                   From wireframes and prototypes to final design, I focus on optimizing usability and visual appeal to ensure that your application or website is user-friendly and aligns with your business objectives.
+                   My goal is to make every interaction smooth and engaging.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>Software Develop</h2>
+                <p>I offer comprehensive software development services that cover the entire lifecycle of application creation.
+                   From initial concept and planning to coding and deployment, I develop robust and scalable software solutions tailored to your specific requirements.
+                   My expertise spans various platforms, allowing me to build applications that are reliable, efficient, and adaptable to evolving needs.Whether you need custom software, system integration,or enhancements to existing systems, I provide high-quality solutions that meet your business goals and technical demands.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -----------Poortfolio---------- -->
+
+<div id="portfolio">
+
+<div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+        <div class="work">
+            <img src="images/carrent.jpg" >
+            <div class="layer">
+                <h3>Website on Car Rental</h3>
+                <p>
+                    Developed a comprehensive car rental website with a focus on delivering a seamless user experience. Utilized Bootstrap, HTML5, 
+                    and CSS3 to create a responsive and user-friendly interface that allows customers to browse available cars and make bookings effortlessly. 
+                    Implemented booking features enabling users to select vehicles, choose rental periods, and confirm reservations.
+                    Integrated JavaScript to enhance user interactions and validation processes.On the backend, used PHP and MySQL to manage bookings and customer data, ensuring secure storage and optimized performance.
+                </p>
+                <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/hospi.jpg" >
+            <div class="layer">
+                <h3>Healthcare Administration Platform</h3>
+                <p>
+                    Designed and developed a healthcare administration platform with an emphasis on a responsive and intuitive user interface using ASP.NET.
+                    Focused on creating a layout that adapts to various devices and screen sizes. 
+                    Implemented key features such as secure login and patient appointment scheduling forms, enhancing usability and accessibility.
+                    Collaborated with the back-end team to ensure smooth integration of front-end components with back-end functionalities, enabling efficient data flow and interaction.
+                </p>
+                <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/irri.jpg" >
+            <div class="layer">
+                <h3>Aatmanirbhar Sinchan Pranali [Using IOT]</h3>
+                <p>
+                    Engineered an IoT-based plant irrigation system to automate and optimize watering processes. 
+                    Designed and developed the system using Arduino programming and embedded coding, incorporating a soil moisture sensor to monitor moisture levels.
+                    Developed logic to trigger an automatic pump when moisture levels fall below a predefined threshold, ensuring precise and timely irrigation.
+                    Assembled and configured hardware components, including the sensor and pump, for effective integration with the Arduino board, ensuring reliable system operation.
+                </p>
+                <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </div>
+    <a href="" class="btn">See More</a>
+</div>
+</div>
+
+<!-- -------------Contact----------- -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane"></i>videkarpranav10@gmail.com</p>
+                <p> <i class="fa-solid fa-phone"></i></i>XXXXXXXXXX</p>
+                <div class="social-icons">
+                <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                 </div>
+                 <a href="images/Videkar_Pranav _Resume_August2024.pdf"  class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right"></div>
+            <form name="submit-to-google-sheet" >
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+        </div>
+    </div>
+</div>
+    <div class="copyright">
+        <p>Copyright © Pranav_Videkar . Made with <i class="fa-sharp fa-solid fa-heart"></i> Love</p>
+    </div>
+</div>
+    <script>
+
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+       
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script> 
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxGvgfsEqsaqmgHtyyKSIsVTFNC9357_WfpFbl8cAaUKu9zSrxWa4kek_NN_Lu3cqCj/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg= document.getElementById("msg")
+
+
+            form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML="Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML=""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+        </script>
+</body>
+</html>
